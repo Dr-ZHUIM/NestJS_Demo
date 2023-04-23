@@ -7,10 +7,10 @@
     - [module]
       -  controllers
       -  services
-      . `[module].module.ts`
+      . `[module].module.ts`  
   - services (public services)
   - types
-  . `app.controller.ts`
-  . `app.modules.ts`
-  . `app.service.ts`
-  . `main.ts`
+  . `app.controller.ts`  
+  . `app.modules.ts`  
+  . `app.service.ts`  
+  . `main.ts`  
