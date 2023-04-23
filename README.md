@@ -6,10 +6,10 @@
   - modules
     - [module]
       -  controllers
-      -  services
+      -  services  
       . `[module].module.ts`  
   - services (public services)
-  - types
+  - types  
   . `app.controller.ts`  
   . `app.modules.ts`  
   . `app.service.ts`  
