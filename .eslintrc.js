@@ -249,7 +249,7 @@ module.exports = {
       2,
       'always',
       {
-        objectsInObjects: false,
+        objectsInObjects: true,
       },
     ],
     'array-bracket-spacing': [2, 'never'],

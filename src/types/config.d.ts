@@ -1,4 +1,7 @@
-declare type Config = {
-  defaultAvatarUrl: string;
-  dataBase: string;
-};
+declare type Config = Record<
+  string,
+  {
+    defaultAvatarUrl: string;
+    dataBase: string;
+  }
+>;
