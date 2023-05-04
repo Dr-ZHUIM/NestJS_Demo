@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 import { DatabaseService } from './services/database/database.service';
-import { ConfigService } from './modules/config/service/config.service';
+import { ConfigService } from '@nestjs/config';
 
 @Controller()
 export class AppController {
@@ -22,7 +22,9 @@ export class AppController {
   }
 
   @Get('getConfig')
-  getConfig(): Config {
-    return this.configService.getConfig();
+  getConfig(): string {
+    return `${process.env.NODE_ENV}, isDev: ${this.configService.get(
+      'app.isDev',
+    )}`;
   }
 }

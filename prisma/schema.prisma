@@ -13,7 +13,7 @@ datasource db {
 }
 
 model user {
-  id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  id        Int      @id @default(autoincrement()) @db.UnsignedInt
   email     String
   password  String
   avatar    String?
@@ -23,13 +23,13 @@ model user {
 }
 
 model category {
-  id       BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  id       Int       @id @default(autoincrement()) @db.UnsignedInt
   title    String
   articles article[]
 }
 
 model article {
-  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  id         Int       @id @default(autoincrement()) @db.UnsignedInt
   title      String
   content    String    @db.Text
   thumb      String?
@@ -37,5 +37,5 @@ model article {
   createdAt  DateTime  @default(now())
   updateAt   DateTime  @updatedAt
   category   category? @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  categoryId BigInt?   @db.UnsignedBigInt
+  categoryId Int?      @db.UnsignedInt
 }
